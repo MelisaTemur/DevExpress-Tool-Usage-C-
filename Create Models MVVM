@@ -1,0 +1,45 @@
+ public class AViewModel: Amodel // AView model inherited from AModel(Base Model)
+ {
+     public DateTime date { get; set; }
+     public string Some { get; set; }
+     public int Some1 { get; set; }
+     public int Some2 { get; set; }
+     public int Some3 { get; set; }
+     public string Some4 { get; set; }
+     public string Some5 { get;set; }
+
+ }  
+  public class AFilterModel // Another cs. file for Filter model which u can use for list specific data in form
+  {
+     public string Some { get; set; }
+     public string Some1 { get; set; }
+     public string Some2 { get; set; }
+  }
+ public class ReportModel // Another cs. file for Report model which u can use for getting data to report 
+  {
+     public string Some { get; set; }
+     public string Some1 { get; set; }
+     public string Some2 { get; set; }
+  }
+
+ public class AModel : Model<int>,IDelete // Inherit Base model(if you have) or some related functions /Main Model u can use
+    {
+        public AModel()
+        {
+            ArelatedModel = new BindingList<ArelatedModel>();//Construct a BindingList for use related model 
+        }
+
+        [Property(HeaderMessageCode = "Some")]// In devxpress grid view tool u can use also this component for columns header
+        public override int Id { get; set; }
+        public Guid Uid { get; set; }
+        public int Some1 { get; set; }
+        public int Some2 { get; set; }
+        [Property(HeaderMessageCode = "Name")]
+        public string Name { get; set; }
+        [Property(HeaderMessageCode = "Surname")]
+        public string Surname { get; set; }
+        
+        public virtual ICollection<ArelatedModel> ArelatedModel { get; set; }
+        public List<TrackingEntity> Delete { get; set; } // call function
+    }
+}
