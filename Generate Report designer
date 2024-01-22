@@ -1,0 +1,25 @@
+ partial class REPORT
+ {
+   
+     private System.ComponentModel.IContainer components = null;
+
+     protected override void Dispose(bool disposing)
+     {
+         if (disposing && (components != null))
+         {
+             components.Dispose();
+         }
+         base.Dispose(disposing);
+     }
+
+     #region Designer generated code
+
+     private void InitializeComponent()
+     {
+         this.components = new System.ComponentModel.Container();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(REPORT));
+         DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+         DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new   DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+         this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+         this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+         this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();... eg
