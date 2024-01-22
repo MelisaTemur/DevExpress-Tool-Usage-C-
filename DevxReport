@@ -1,0 +1,11 @@
+ List<AViewModel> list = gridView.GetLine<AViewModel>();
+ List<BReportModel> reportData = new();
+ AViewModel forSomeEntity = list.FirstOrDefault(a => a.forSomeEntity== a.forSomeEntity);
+ var item = (AViewModel)gridView.GetFocusedRow();
+
+ if (list.Count() > 0 && item.forSomeEntity != null)
+ {
+         item.DateNow = DateTime.Now;
+         item.Some = list.Count;
+         etiketListesi.ForEach(x => { reportData.Add(new BReportModel { Id = x.Id, Some = item.Count, DateNow = DateTime.Now,    some=x.some,some1 = x.some1, some2 = x.some2, some3 = x.some3,... });
+ }
