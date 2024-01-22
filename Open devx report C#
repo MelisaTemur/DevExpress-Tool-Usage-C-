@@ -1,0 +1,6 @@
+ REPORT rapor = new()// Consruct a new report 
+ {
+     DataSource = reportData// Assign your report to datasource
+
+ };
+ REPORTVIEWER.Show(rapor);// use show function
